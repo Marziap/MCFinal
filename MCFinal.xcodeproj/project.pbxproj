@@ -7,18 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F2165C82BF8988F00EB16B2 /* IdeaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2165C72BF8988F00EB16B2 /* IdeaDetail.swift */; };
+		7F2165CA2BF8A92700EB16B2 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2165C92BF8A92700EB16B2 /* UserModel.swift */; };
+		7F2165CC2BF8AAE800EB16B2 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2165CB2BF8AAE800EB16B2 /* Requests.swift */; };
+		7F2165CE2BF8AC0F00EB16B2 /* RequestCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2165CD2BF8AC0F00EB16B2 /* RequestCard.swift */; };
 		7F34CCA82BF7E5F1001153F5 /* MCFinalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCA72BF7E5F1001153F5 /* MCFinalApp.swift */; };
 		7F34CCAA2BF7E5F1001153F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCA92BF7E5F1001153F5 /* ContentView.swift */; };
 		7F34CCAC2BF7E5F2001153F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F34CCAB2BF7E5F2001153F5 /* Assets.xcassets */; };
 		7F34CCAF2BF7E5F2001153F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F34CCAE2BF7E5F2001153F5 /* Preview Assets.xcassets */; };
+		7F34CCB62BF7E79C001153F5 /* IdeasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCB52BF7E79C001153F5 /* IdeasView.swift */; };
+		7F34CCB82BF7EEFA001153F5 /* IdeaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCB72BF7EEFA001153F5 /* IdeaModel.swift */; };
+		7F34CCBA2BF7F548001153F5 /* IdeaCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCB92BF7F548001153F5 /* IdeaCard.swift */; };
+		7F34CCBC2BF7F74F001153F5 /* NewIdeaModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCBB2BF7F74F001153F5 /* NewIdeaModal.swift */; };
+		7F34CCC02BF813AA001153F5 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCBF2BF813AA001153F5 /* ProjectsView.swift */; };
+		7F34CCC22BF81D8D001153F5 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCC12BF81D8D001153F5 /* PostModel.swift */; };
+		7F34CCC42BF81F32001153F5 /* NewProjectModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCC32BF81F32001153F5 /* NewProjectModal.swift */; };
+		7F34CCC62BF8341C001153F5 /* ProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCC52BF8341C001153F5 /* ProjectCard.swift */; };
+		7F34CCC82BF83484001153F5 /* CommunitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCC72BF83484001153F5 /* CommunitiesView.swift */; };
+		7F34CCCA2BF836F7001153F5 /* JoinCommView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCC92BF836F7001153F5 /* JoinCommView.swift */; };
+		7F34CCCF2BF8385A001153F5 /* NewCommView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCCE2BF8385A001153F5 /* NewCommView.swift */; };
+		7F34CCD12BF83A8B001153F5 /* CommModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCD02BF83A8B001153F5 /* CommModel.swift */; };
+		7F34CCD32BF83E11001153F5 /* CommCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCD22BF83E11001153F5 /* CommCard.swift */; };
+		7F34CCD52BF84217001153F5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCD42BF84217001153F5 /* ProfileView.swift */; };
+		7F34CCD72BF84740001153F5 /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCD62BF84740001153F5 /* PersonalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F2165C72BF8988F00EB16B2 /* IdeaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDetail.swift; sourceTree = "<group>"; };
+		7F2165C92BF8A92700EB16B2 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		7F2165CB2BF8AAE800EB16B2 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		7F2165CD2BF8AC0F00EB16B2 /* RequestCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCard.swift; sourceTree = "<group>"; };
 		7F34CCA42BF7E5F1001153F5 /* MCFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F34CCA72BF7E5F1001153F5 /* MCFinalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCFinalApp.swift; sourceTree = "<group>"; };
 		7F34CCA92BF7E5F1001153F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7F34CCAB2BF7E5F2001153F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F34CCAE2BF7E5F2001153F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7F34CCB52BF7E79C001153F5 /* IdeasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasView.swift; sourceTree = "<group>"; };
+		7F34CCB72BF7EEFA001153F5 /* IdeaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaModel.swift; sourceTree = "<group>"; };
+		7F34CCB92BF7F548001153F5 /* IdeaCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaCard.swift; sourceTree = "<group>"; };
+		7F34CCBB2BF7F74F001153F5 /* NewIdeaModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIdeaModal.swift; sourceTree = "<group>"; };
+		7F34CCBF2BF813AA001153F5 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		7F34CCC12BF81D8D001153F5 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		7F34CCC32BF81F32001153F5 /* NewProjectModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectModal.swift; sourceTree = "<group>"; };
+		7F34CCC52BF8341C001153F5 /* ProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
+		7F34CCC72BF83484001153F5 /* CommunitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesView.swift; sourceTree = "<group>"; };
+		7F34CCC92BF836F7001153F5 /* JoinCommView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCommView.swift; sourceTree = "<group>"; };
+		7F34CCCE2BF8385A001153F5 /* NewCommView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCommView.swift; sourceTree = "<group>"; };
+		7F34CCD02BF83A8B001153F5 /* CommModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommModel.swift; sourceTree = "<group>"; };
+		7F34CCD22BF83E11001153F5 /* CommCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommCard.swift; sourceTree = "<group>"; };
+		7F34CCD42BF84217001153F5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		7F34CCD62BF84740001153F5 /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +90,14 @@
 			isa = PBXGroup;
 			children = (
 				7F34CCA72BF7E5F1001153F5 /* MCFinalApp.swift */,
+				7F34CCD42BF84217001153F5 /* ProfileView.swift */,
+				7F34CCD62BF84740001153F5 /* PersonalView.swift */,
 				7F34CCA92BF7E5F1001153F5 /* ContentView.swift */,
+				7F34CCCB2BF83806001153F5 /* CommViews */,
+				7F34CCCD2BF83824001153F5 /* ProjectsViews */,
+				7F34CCCC2BF83813001153F5 /* IdeasViews */,
+				7F34CCBE2BF7F771001153F5 /* Components */,
+				7F34CCBD2BF7F766001153F5 /* Models */,
 				7F34CCAB2BF7E5F2001153F5 /* Assets.xcassets */,
 				7F34CCAD2BF7E5F2001153F5 /* Preview Content */,
 			);
@@ -65,6 +110,58 @@
 				7F34CCAE2BF7E5F2001153F5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7F34CCBD2BF7F766001153F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7F34CCB72BF7EEFA001153F5 /* IdeaModel.swift */,
+				7F34CCC12BF81D8D001153F5 /* PostModel.swift */,
+				7F34CCD02BF83A8B001153F5 /* CommModel.swift */,
+				7F2165C92BF8A92700EB16B2 /* UserModel.swift */,
+				7F2165CB2BF8AAE800EB16B2 /* Requests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7F34CCBE2BF7F771001153F5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7F34CCB92BF7F548001153F5 /* IdeaCard.swift */,
+				7F34CCC52BF8341C001153F5 /* ProjectCard.swift */,
+				7F34CCD22BF83E11001153F5 /* CommCard.swift */,
+				7F2165CD2BF8AC0F00EB16B2 /* RequestCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7F34CCCB2BF83806001153F5 /* CommViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F34CCC72BF83484001153F5 /* CommunitiesView.swift */,
+				7F34CCC92BF836F7001153F5 /* JoinCommView.swift */,
+				7F34CCCE2BF8385A001153F5 /* NewCommView.swift */,
+			);
+			path = CommViews;
+			sourceTree = "<group>";
+		};
+		7F34CCCC2BF83813001153F5 /* IdeasViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F34CCB52BF7E79C001153F5 /* IdeasView.swift */,
+				7F34CCBB2BF7F74F001153F5 /* NewIdeaModal.swift */,
+				7F2165C72BF8988F00EB16B2 /* IdeaDetail.swift */,
+			);
+			path = IdeasViews;
+			sourceTree = "<group>";
+		};
+		7F34CCCD2BF83824001153F5 /* ProjectsViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F34CCBF2BF813AA001153F5 /* ProjectsView.swift */,
+				7F34CCC32BF81F32001153F5 /* NewProjectModal.swift */,
+			);
+			path = ProjectsViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +234,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F34CCC82BF83484001153F5 /* CommunitiesView.swift in Sources */,
+				7F34CCD32BF83E11001153F5 /* CommCard.swift in Sources */,
 				7F34CCAA2BF7E5F1001153F5 /* ContentView.swift in Sources */,
+				7F34CCC22BF81D8D001153F5 /* PostModel.swift in Sources */,
+				7F34CCCF2BF8385A001153F5 /* NewCommView.swift in Sources */,
+				7F34CCBC2BF7F74F001153F5 /* NewIdeaModal.swift in Sources */,
+				7F34CCD72BF84740001153F5 /* PersonalView.swift in Sources */,
+				7F34CCCA2BF836F7001153F5 /* JoinCommView.swift in Sources */,
 				7F34CCA82BF7E5F1001153F5 /* MCFinalApp.swift in Sources */,
+				7F2165CE2BF8AC0F00EB16B2 /* RequestCard.swift in Sources */,
+				7F34CCD52BF84217001153F5 /* ProfileView.swift in Sources */,
+				7F34CCD12BF83A8B001153F5 /* CommModel.swift in Sources */,
+				7F34CCC42BF81F32001153F5 /* NewProjectModal.swift in Sources */,
+				7F34CCBA2BF7F548001153F5 /* IdeaCard.swift in Sources */,
+				7F2165CC2BF8AAE800EB16B2 /* Requests.swift in Sources */,
+				7F34CCC02BF813AA001153F5 /* ProjectsView.swift in Sources */,
+				7F34CCB82BF7EEFA001153F5 /* IdeaModel.swift in Sources */,
+				7F2165CA2BF8A92700EB16B2 /* UserModel.swift in Sources */,
+				7F2165C82BF8988F00EB16B2 /* IdeaDetail.swift in Sources */,
+				7F34CCB62BF7E79C001153F5 /* IdeasView.swift in Sources */,
+				7F34CCC62BF8341C001153F5 /* ProjectCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
