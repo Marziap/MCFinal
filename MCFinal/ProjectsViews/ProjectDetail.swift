@@ -39,6 +39,14 @@ struct ProjectDetail: View {
                     .contentMargins(25, for: .scrollContent)
                     .scrollTargetBehavior(.viewAligned)
                         
+
+                    
+                    Text(project.summary)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(.myGray)
+                        .cornerRadius(10)
+                    
                     ScrollView(.horizontal){
                         HStack{
                             ForEach(project.tags, id: \.self){ tag in
@@ -50,12 +58,6 @@ struct ProjectDetail: View {
                             }
                         }
                     }.padding()
-                    
-                    Text(project.summary)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(.myGray)
-                        .cornerRadius(10)
                     
                     Text("[GitHub](https://www.google.com)")
                                  .tint(.black)
