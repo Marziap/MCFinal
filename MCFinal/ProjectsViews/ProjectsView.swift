@@ -13,26 +13,30 @@ struct ProjectsView: View {
     @Query var projects: [Project]
     @State var openModal = false
     var hideNavBar = false
-    let columns = [
-        GridItem(.adaptive(minimum: 150))
-    ]
-    
+
     var body: some View {
         NavigationStack {
             ScrollView {
                 HStack(alignment: .top, spacing: 20) {
                     VStack {
-                        ForEach(projects.prefix(projects.count / 2), id: \.self) { project in
-                            ProjectCard(project: project)
+                        ForEach(projects.enumerated().filter { $0.offset % 2 == 0 }.map { $0.element }, id: \.self) { project in
+                            NavigationLink {
+                                ProjectDetail(project: project)
+                            } label: {
+                                ProjectCard(project: project)
+                            }
                         }
                     }
                     VStack {
-                        ForEach(projects.suffix(projects.count / 2), id: \.self) { project in
-                            ProjectCard(project: project)
+                        ForEach(projects.enumerated().filter { $0.offset % 2 != 0 }.map { $0.element }, id: \.self) { project in
+                            NavigationLink {
+                                ProjectDetail(project: project)
+                            } label: {
+                                ProjectCard(project: project)
+                            }
                         }
                     }
                 }.padding(.horizontal)
-                
             }
             .toolbar {
                 Button(action: {
@@ -52,8 +56,6 @@ struct ProjectsView: View {
         }
     }
 }
-
-
 
 #Preview {
     ProjectsView()

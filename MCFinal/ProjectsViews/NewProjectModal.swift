@@ -23,7 +23,7 @@ struct NewProjectModal: View {
     @State var selectedPhoto: PhotosPickerItem?
     @State private var photoImage: UIImage?
     
-    @State private var suggestions = ["unity", "swift", "machine learning", "swift data"]
+    @State private var suggestions = ["unity", "swift", "machine learning", "swift data", "swift data", "swift data", "swift data", "swift data", ]
     
     @State var tagss: [String] = []
     
@@ -91,6 +91,8 @@ struct NewProjectModal: View {
                             }
                         })
                         .onSubmit {
+                            
+                            
                             if(filtered.isEmpty){
                                 suggestions.append(input)
                             }
@@ -99,36 +101,49 @@ struct NewProjectModal: View {
                                 tagss.append(input)
                             }
                             
+                            input=""
+                            
                             
                         }
                     
                         .popover(isPresented: $popoverOn,
                                  attachmentAnchor: .point(.center),
                                  content: {
-                            HStack {
-                                ForEach(filtered, id: \.self) {suggestion in
-                                    Button(action: {
-                                        input=suggestion
-                                        popoverOn=false
-                                    }, label: {
-                                        Text(suggestion)
-                                    })
-                                    
-                                }
+                            ScrollView (.horizontal){
+                                HStack {
+                                    ForEach(filtered.sorted(), id: \.self) {suggestion in
+                                        
+                                        let cnt: Int = filtered.count
+                                        
+                                        Button(action: {
+                                            tagss.append(suggestion)
+    //                                        input=suggestion
+                                            input=""
+                                            popoverOn=false
+                                        }, label: {
+                                            Text("\(suggestion)")
+                                               
+                                        })
+                                        .containerRelativeFrame(.horizontal, count: cnt <= 4 ? cnt : 4, spacing: 1)
+                                        
+                                    }
+                                }.padding(.vertical)
+                                .presentationCompactAdaptation((.popover))
                             }
-                            .presentationCompactAdaptation((.popover))
                     })
                 }
                 
                 if(!tagss.isEmpty){
                     Section{
-                        HStack{
-                            ForEach(tagss, id:\.self){tag in
-                                Text(tag)
-                                    .bold()
-                                    .padding(10)
-                                    .background(.myGray)
-                                    .cornerRadius(10)
+                        ScrollView(.horizontal) {
+                            HStack{
+                                ForEach(tagss, id:\.self){tag in
+                                    Text(tag)
+                                        .bold()
+                                        .padding(10)
+                                        .background(.myGray)
+                                        .cornerRadius(10)
+                                }
                             }
                         }
                     }
@@ -149,8 +164,4 @@ struct NewProjectModal: View {
             .navigationTitle("New Project")
         }
     }
-}
-
-#Preview {
-    NewProjectModal()
 }

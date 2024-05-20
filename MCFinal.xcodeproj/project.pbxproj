@@ -30,6 +30,7 @@
 		7F34CCD32BF83E11001153F5 /* CommCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCD22BF83E11001153F5 /* CommCard.swift */; };
 		7F34CCD52BF84217001153F5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCD42BF84217001153F5 /* ProfileView.swift */; };
 		7F34CCD72BF84740001153F5 /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34CCD62BF84740001153F5 /* PersonalView.swift */; };
+		7FBEF60A2BFB7FED007BC95E /* ProjectDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBEF6092BFB7FED007BC95E /* ProjectDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		7F34CCD22BF83E11001153F5 /* CommCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommCard.swift; sourceTree = "<group>"; };
 		7F34CCD42BF84217001153F5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		7F34CCD62BF84740001153F5 /* PersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
+		7FBEF6092BFB7FED007BC95E /* ProjectDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			children = (
 				7F34CCBF2BF813AA001153F5 /* ProjectsView.swift */,
 				7F34CCC32BF81F32001153F5 /* NewProjectModal.swift */,
+				7FBEF6092BFB7FED007BC95E /* ProjectDetail.swift */,
 			);
 			path = ProjectsViews;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				7F34CCBA2BF7F548001153F5 /* IdeaCard.swift in Sources */,
 				7F2165CC2BF8AAE800EB16B2 /* Requests.swift in Sources */,
 				7F34CCC02BF813AA001153F5 /* ProjectsView.swift in Sources */,
+				7FBEF60A2BFB7FED007BC95E /* ProjectDetail.swift in Sources */,
 				7F34CCB82BF7EEFA001153F5 /* IdeaModel.swift in Sources */,
 				7F2165CA2BF8A92700EB16B2 /* UserModel.swift in Sources */,
 				7F2165C82BF8988F00EB16B2 /* IdeaDetail.swift in Sources */,
