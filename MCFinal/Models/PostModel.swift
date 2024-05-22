@@ -18,13 +18,15 @@ class Project {
     var photos: [Data]
     var tags: [String]
     var link: String
+    var creation: Date
     
-    init(author: String = "Marzia Pirozzi", name: String, summary: String, photos: [Data], tags: [String] = ["Unity", "Database", "Machine Learning", "Swift", "UI"], link:String = "google.com") {
+    init(author: String = "Marzia Pirozzi", name: String, summary: String, photos: [Data], tags: [String] = ["Unity", "Database", "Machine Learning", "Swift", "UI"], link:String = "google.com", creation: Date = Date.now) {
         self.author = author
         self.name = name
         self.summary = summary
         self.photos = photos
         self.tags = tags
         self.link=link
+        self.creation = creation
     }
 }

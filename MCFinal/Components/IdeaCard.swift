@@ -56,7 +56,7 @@ struct IdeaCard: View {
                     modelContext.insert(reqs[0])
                     modelContext.insert(reqs[1])
                 }, label: {
-                    Image(systemName: "hand.raised")
+                    Image(systemName: "person.badge.plus")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 50)
