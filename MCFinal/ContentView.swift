@@ -39,12 +39,12 @@ struct ContentView: View {
                 .labelsHidden()
         }.onAppear(perform: {
             do {
-                
-                //                try modelContext.delete(model: Idea.self)
-                //                try modelContext.delete(model: Project.self)
-                //                try modelContext.delete(model: Community.self)
-                //                try modelContext.delete(model: Request.self)
-                //                try modelContext.delete(model: User.self)
+//                
+//                                try modelContext.delete(model: Idea.self)
+//                                try modelContext.delete(model: Project.self)
+//                                try modelContext.delete(model: Community.self)
+//                                try modelContext.delete(model: Request.self)
+//                                try modelContext.delete(model: User.self)
             } catch {
                 print("Failed to clear")
             }
