@@ -14,6 +14,7 @@ struct IdeasView: View {
     @Environment(\.modelContext) var modelContext
     @Query var ideas: [Idea]
     @State var openModal = false
+    @State var search = ""
     var hideNavBar = false
     
     var body: some View {
@@ -43,6 +44,7 @@ struct IdeasView: View {
                 })
             }
             .navigationBarHidden(hideNavBar)
+            .searchable(text: $search)
         }
         .sheet(isPresented: $openModal, content: {
             NewIdeaModal()

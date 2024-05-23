@@ -12,6 +12,7 @@ struct ProjectsView: View {
     @Environment(\.modelContext) var modelContext
     @Query var projects: [Project]
     @State var openModal = false
+    @State var search = ""
     var hideNavBar = false
 
     var body: some View {
@@ -50,6 +51,7 @@ struct ProjectsView: View {
             }
             .navigationTitle("Get Inspired")
             .navigationBarHidden(hideNavBar)
+            .searchable(text: $search)
         }
         .sheet(isPresented: $openModal) {
             NewProjectModal()

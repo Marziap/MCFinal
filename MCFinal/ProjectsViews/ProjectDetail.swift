@@ -14,38 +14,69 @@ struct ProjectDetail: View {
     //TODO: like and comments
     
     var project: Project
+    @State private var isLiked = false
+    @State private var openComments = false
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    ScrollView(.horizontal){
+                    ZStack{
+                        VStack{
+                            ScrollView(.horizontal){
+                                HStack{
+                                    ForEach(project.photos, id:\.self){image in
+                                        
+                                        let uiImage = UIImage(data: image)
+                                        
+                                        Image(uiImage: uiImage!)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .containerRelativeFrame(.horizontal, count: 1, spacing: 10)
+                                            .scrollTransition { content, phase in
+                                                content.opacity(phase.isIdentity ? 1:0.5)
+                                            }
+                                    }
+                                }.scrollTargetLayout()
+                                
+                            }
+                            .contentMargins(1, for: .scrollContent)
+                            .scrollTargetBehavior(.viewAligned)
+                            
+                        }
+                        VStack{
+                            Spacer()
                         HStack{
-                            ForEach(project.photos, id:\.self){image in
-                                
-                                let uiImage = UIImage(data: image)
-                                
-                                Image(uiImage: uiImage!)
+                            Button(action: {
+                                isLiked.toggle()
+                            }, label: {
+                                Image(systemName: isLiked ? "heart.fill" : "heart")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .containerRelativeFrame(.horizontal, count: 1, spacing: 10)
-                                    .scrollTransition { content, phase in
-                                        content.opacity(phase.isIdentity ? 1:0.5)
-                                    }
-                            }
-                        }.scrollTargetLayout()
-                    
+                                    .frame(height: 24)
+                                    .tint(isLiked ? Color(.red) : Color(.black))
+                            })
+                            
+                            Button(action: {
+                                openComments=true
+                            }, label: {
+                                Image(systemName: "bubble")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: 24)
+                            })
+                            
+                        }.padding()
+                            .background(.myGray)
+                            .cornerRadius(10)
                     }
-                    .contentMargins(25, for: .scrollContent)
-                    .scrollTargetBehavior(.viewAligned)
-                        
-
-                    
+                }
                     Text(project.summary)
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(.myGray)
                         .cornerRadius(10)
+                        .padding(.top)
                     
                     ScrollView(.horizontal){
                         HStack{
@@ -60,19 +91,21 @@ struct ProjectDetail: View {
                     }.padding()
                     
                     Text("[GitHub](https://www.google.com)")
-                                 .tint(.black)
+                        .tint(.black)
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(.myGray)
                         .cornerRadius(10)
-                        
+                    
                     
                         .navigationTitle(project.name)
-               
-            }
+                    
+                }
                 .padding()
-            
-            }
+                
+            }.sheet(isPresented: $openComments, content: {
+                Text("comments")
+            })
         }
     }
 }

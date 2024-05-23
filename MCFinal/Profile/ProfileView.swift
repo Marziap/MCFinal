@@ -32,14 +32,7 @@ struct ProfileView: View {
                             
                             HStack{
 
-                                NavigationLink {
-                                    Text("settings")
-                                } label: {
-                                    Image(systemName: "gear")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 24)
-                                }
+                              
 
                                 
                                 NavigationLink {
@@ -51,6 +44,15 @@ struct ProfileView: View {
                                         .frame(width: 24)
                                 }
                                 
+                                
+                                NavigationLink {
+                                    Text("settings")
+                                } label: {
+                                    Image(systemName: "ellipsis")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                   .frame(width: 24)
+                                }
                                 
                                 
                             }.padding(.bottom, 10)
@@ -93,6 +95,7 @@ struct ProfileView: View {
                     }
                     
             }
+            
         }
         
     }
