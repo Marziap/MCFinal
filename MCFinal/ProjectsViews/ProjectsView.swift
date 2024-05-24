@@ -9,8 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ProjectsView: View {
-    @Environment(\.modelContext) var modelContext
-    @Query var projects: [Project]
+    @Environment(Controller.self) private var controller
     @State var openModal = false
     @State var search = ""
     var hideNavBar = false
@@ -20,7 +19,7 @@ struct ProjectsView: View {
             ScrollView {
                 HStack(alignment: .top, spacing: 20) {
                     VStack {
-                        ForEach(projects.enumerated().filter { $0.offset % 2 == 0 }.map { $0.element }, id: \.self) { project in
+                        ForEach(controller.projects.enumerated().filter { $0.offset % 2 == 0 }.map { $0.element }) { project in
                             NavigationLink {
                                 ProjectDetail(project: project)
                             } label: {
@@ -29,7 +28,7 @@ struct ProjectsView: View {
                         }
                     }
                     VStack {
-                        ForEach(projects.enumerated().filter { $0.offset % 2 != 0 }.map { $0.element }, id: \.self) { project in
+                        ForEach(controller.projects.enumerated().filter { $0.offset % 2 != 0 }.map { $0.element }) { project in
                             NavigationLink {
                                 ProjectDetail(project: project)
                             } label: {

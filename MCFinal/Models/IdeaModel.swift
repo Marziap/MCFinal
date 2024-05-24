@@ -7,10 +7,9 @@
 
 import Foundation
 import SwiftUI
-import SwiftData
 
-@Model
-class Idea{
+class Idea: Codable, Identifiable{
+    var id: String
     var name: String
     var author: String
     var text: String
@@ -18,7 +17,8 @@ class Idea{
     var tags: [String]
     var isOpen: Bool
     
-    init(name: String = "Game", author: String = "Marzia Pirozzi", text: String = "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo...", lookingFor: String = "Coders", tags: [String] = ["Unity", "Database", "Machine Learning", "Swift", "UI"], isOpen: Bool = true) {
+    init(id: String = UUID().uuidString, name: String = "Game", author: String = "Marzia Pirozzi", text: String = "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo...", lookingFor: String = "Coders", tags: [String] = ["Unity", "Database", "Machine Learning", "Swift", "UI"], isOpen: Bool = true) {
+        self.id = id
         self.name = name
         self.author = author
         self.text = text

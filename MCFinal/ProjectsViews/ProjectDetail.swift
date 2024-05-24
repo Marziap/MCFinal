@@ -25,11 +25,12 @@ struct ProjectDetail: View {
                         VStack{
                             ScrollView(.horizontal){
                                 HStack{
-                                    ForEach(project.photos, id:\.self){image in
+                                    ForEach(images, id:\.self){image in
                                         
-                                        let uiImage = UIImage(data: image)
+//                                        let uiImage = UIImage(data: image)
                                         
-                                        Image(uiImage: uiImage!)
+//                                        Image(uiImage: uiImage!)
+                                        Image(image)
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
                                             .containerRelativeFrame(.horizontal, count: 1, spacing: 10)

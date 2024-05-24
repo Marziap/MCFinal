@@ -10,7 +10,7 @@ import SwiftData
 import PhotosUI
 
 struct NewProjectModal: View {
-    @Environment(\.modelContext) var modelContext
+//    @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
     @State var title = ""
     @State var summary = ""
@@ -23,7 +23,9 @@ struct NewProjectModal: View {
     @State var selectedPhoto: PhotosPickerItem?
     @State private var photoImage: UIImage?
     
-    @State private var suggestions = ["unity", "swift", "machine learning", "swift data", "swift data", "swift data", "swift data", "swift data", ]
+    @Environment(Controller.self) private var controller
+    
+//    @State private var suggestions = ["unity", "swift", "machine learning", "swift data", "swift data", "swift data", "swift data", "swift data", ]
     
     @State var tagss: [String] = []
     
@@ -82,7 +84,7 @@ struct NewProjectModal: View {
                     TextField("Tags", text: $input)
                     
                         .onChange(of: input, {
-                            filtered = suggestions.filter { $0.lowercased().contains(input.lowercased()) }
+                            filtered = controller.tags.filter { $0.lowercased().contains(input.lowercased()) }
 
                             if(filtered.isEmpty){
                                 popoverOn=false
@@ -94,7 +96,7 @@ struct NewProjectModal: View {
                             
                             
                             if(filtered.isEmpty){
-                                suggestions.append(input)
+                                controller.tags.append(input)
                             }
                             
                             if(!tagss.contains(input)){
@@ -152,8 +154,8 @@ struct NewProjectModal: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        let project = Project(name: title, summary: summary, photos: photos.map { $0.pngData()! }, tags: tagss)
-                        modelContext.insert(project)
+//                        let project = Project(name: title, summary: summary, photos: photos.map { $0.pngData()! }, tags: tagss)
+//                        modelContext.insert(project)
                         dismiss()
                     }) {
                         Image(systemName: "checkmark")

@@ -11,7 +11,7 @@ import SwiftData
 
 
 struct NewIdeaModal: View {
-    @Environment(\.modelContext) var modelContext
+   // @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
     @State var title = ""
     @State var summary = ""
@@ -106,8 +106,8 @@ struct NewIdeaModal: View {
             .toolbar{
                 Button(action: {
                     
-                    let idea = Idea(name: title, text: summary, lookingFor: role, tags: tagss, isOpen: true)
-                    modelContext.insert(idea)
+//                    let idea = Idea(name: title, text: summary, lookingFor: role, tags: tagss, isOpen: true)
+//                    modelContext.insert(idea)
                     dismiss()
                     
                     

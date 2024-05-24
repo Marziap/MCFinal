@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct RequestCard: View {
-    
-    var user: User
+    @Environment(Controller.self) private var controller
+    var userId: String
     
     var body: some View {
         HStack{
             HStack {
-                Image(user.pfp)
-                    .resizable()
-                    .frame(width: 60, height: 60)
-                    .cornerRadius(50)
-                    .aspectRatio(contentMode: .fit)
-                    
+                VStack{
+                    Image("pfp")
+                        .resizable()
+                        .frame(width: 60, height: 60)
+                        .cornerRadius(50)
+                        .aspectRatio(contentMode: .fit)
+                        
+                    Text(controller.userr.usename)
+                }
+                
                 
                 VStack{
                     Button(action: {

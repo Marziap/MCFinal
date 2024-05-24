@@ -12,9 +12,9 @@ struct NewCommView: View {
     @State private var name = ""
     @State private var password = ""
     @State private var summary = ""
-    @Environment(\.modelContext) var modelContext
+//    @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
-    @Query var communities: [Community]
+//    @Query var communities: [Community]
     var body: some View {
         NavigationStack {
             Form{
@@ -34,8 +34,8 @@ struct NewCommView: View {
                 .navigationTitle("New Community")
                 .toolbar{
                     Button(action: {
-                        let comm = Community(name: name, password: password, summary: summary)
-                        modelContext.insert(comm)
+//                        let comm = Community(name: name, password: password, summary: summary)
+//                        modelContext.insert(comm)
                         dismiss()
                     }) {
                         Image(systemName: "checkmark")

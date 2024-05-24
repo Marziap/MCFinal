@@ -9,9 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct IdeaDetail: View {
-    @Environment(\.modelContext) var modelContext
-    @Query var requests: [Request]
     var idea: Idea
+    @Environment(Controller.self) private var controller
     
     var body: some View {
         ScrollView {
@@ -55,9 +54,9 @@ struct IdeaDetail: View {
                 
                 ScrollView(.horizontal) {
                     HStack{
-                        ForEach(requests){request in
-                            if(request.idea == idea){
-                                RequestCard(user: request.user)
+                        ForEach(controller.requests){request in
+                            if(request.idea == idea.id){
+                                RequestCard(userId: request.user)
                             }
                         }
                     }
@@ -89,6 +88,8 @@ struct IdeaDetail: View {
             .background(.otherGray)
             .cornerRadius(10)
             .padding(.horizontal)
+        }.onAppear{
+            controller.getRequests()
         }
     }
 }

@@ -10,15 +10,16 @@ import SwiftData
 
 struct CommunitiesView: View {
     
-    @Environment(\.modelContext) var modelContext
-    @Query var communities: [Community]
+//    @Environment(\.modelContext) var modelContext
+//    @Query var communities: [Community]
+    @Environment(Controller.self) private var controller
     @State private var joinComm=false
     @State private var newComm=false
     
     var body: some View {
         NavigationStack {
             ScrollView{
-                ForEach(communities){community in
+                ForEach(controller.communities){community in
                     if(community.isIn==true){
                         CommCard(comm: community)
                     }

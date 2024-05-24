@@ -6,15 +6,15 @@
 //
 
 import Foundation
-import SwiftData
 
-@Model
-class Request{
-    var user: User
-    var idea: Idea
+class Request: Codable, Identifiable{
+    var id: String
+    var user: String
+    var idea: String
     var isAccepted: Bool
     
-    init(user: User = User(), idea: Idea = Idea(), isAccepted: Bool = true) {
+    init(id: String = UUID().uuidString, user: String = UUID().uuidString, idea: String = UUID().uuidString, isAccepted: Bool = true) {
+        self.id = id
         self.user = user
         self.idea = idea
         self.isAccepted = isAccepted

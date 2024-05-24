@@ -6,16 +6,16 @@
 //
 
 import Foundation
-import SwiftData
 
-@Model
-class User{
+class User: Codable, Identifiable{
+    var id: String
     var name: String
     var usename: String
     var ruolo: String
     var pfp: String
     
-    init(name: String = "Marzia Pirozzi", usename: String = "mrzprz", ruolo: String = "coder", pfp: String = "pfp") {
+    init(id: String = UUID().uuidString, name: String = "Marzia Pirozzi", usename: String = "mrzprz", ruolo: String = "coder", pfp: String = "pfp") {
+        self.id = id
         self.name = name
         self.usename = usename
         self.ruolo = ruolo

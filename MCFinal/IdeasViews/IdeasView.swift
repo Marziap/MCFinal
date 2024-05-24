@@ -10,11 +10,10 @@ import SwiftData
 
 struct IdeasView: View {
 
-    
-    @Environment(\.modelContext) var modelContext
-    @Query var ideas: [Idea]
     @State var openModal = false
     @State var search = ""
+    @Environment(Controller.self) private var controller
+    
     var hideNavBar = false
     
     var body: some View {
@@ -22,7 +21,7 @@ struct IdeasView: View {
         NavigationStack {
             
             ScrollView{
-                ForEach(ideas){idea in
+                ForEach(controller.ideas){idea in
                     NavigationLink {
                        IdeaDetail(idea: idea)
                     } label: {
@@ -50,8 +49,4 @@ struct IdeasView: View {
             NewIdeaModal()
         })
     }
-}
-
-#Preview {
-    IdeasView()
 }

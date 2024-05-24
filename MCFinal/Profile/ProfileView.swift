@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @State private var selected = 0
+    @Environment(Controller.self) private var controller
     var body: some View {
         NavigationStack {
             VStack (alignment: .leading){
@@ -21,10 +22,10 @@ struct ProfileView: View {
                             .cornerRadius(50)
                         Spacer()
                         VStack(alignment:.leading){
-                            Text("@mrzprz")
+                            Text(controller.userr.usename)
                                 .bold()
                                 .font(.title2)
-                            Text("coder")
+                            Text(controller.userr.ruolo)
                             
                         }.padding(.vertical)
                         Spacer()

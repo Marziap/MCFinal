@@ -9,8 +9,9 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) var modelContext
+//    @Environment(\.modelContext) var modelContext
     //save user's name
+    @Environment(Controller.self) private var controller
     @State private var img: Image = Image("pfp")
     
     var body: some View {
@@ -39,7 +40,12 @@ struct ContentView: View {
                 .labelsHidden()
         }.onAppear(perform: {
             do {
-//                
+                controller.getProjects()
+                controller.getUser()
+                controller.getIdeas()
+                controller.getRequests()
+                controller.getTags()
+                controller.getCommunities()
 //                                try modelContext.delete(model: Idea.self)
 //                                try modelContext.delete(model: Project.self)
 //                                try modelContext.delete(model: Community.self)

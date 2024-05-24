@@ -10,7 +10,7 @@ import SwiftData
 import PhotosUI
 
 struct PersonalView: View {
-    @Environment(\.modelContext) var modelContext
+//    @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
     @State var name = ""
     @State var surname = ""

@@ -9,9 +9,9 @@ import SwiftUI
 import SwiftData
 
 struct IdeaCard: View {
-    @Environment(\.modelContext) var modelContext
+//    @Environment(\.modelContext) var modelContext
     var idea: Idea
-    @Query var requests: [Request]
+//    @Query var requests: [Request]
     
     var body: some View {
         VStack (alignment: .leading){
@@ -52,9 +52,9 @@ struct IdeaCard: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    let reqs: [Request] = [Request(user: User(name: "Giorgio Caiazzo", pfp: "feed2"), idea: idea), Request(user: User(name: "Marzia Pirozzi"), idea: idea)]
-                    modelContext.insert(reqs[0])
-                    modelContext.insert(reqs[1])
+//                    let reqs: [Request] = [Request(user: User(name: "Giorgio Caiazzo", pfp: "feed2"), idea: idea), Request(user: User(name: "Marzia Pirozzi"), idea: idea)]
+//                    modelContext.insert(reqs[0])
+//                    modelContext.insert(reqs[1])
                 }, label: {
                     Image(systemName: "person.badge.plus")
                         .resizable()

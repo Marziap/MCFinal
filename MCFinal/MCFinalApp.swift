@@ -6,14 +6,21 @@
 //
 
 import SwiftUI
-import SwiftData
+import Firebase
 
 @main
 struct MCFinalApp: App {
+    @State private var controller = Controller()
+    
+    init(){
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .modelContainer(for: [Idea.self, Project.self, Community.self, User.self, Request.self])
+//                .modelContainer(for: [Idea.self, User.self, Project.self, Community.self, Request.self])
+                .environment(controller)
         }
     }
 }

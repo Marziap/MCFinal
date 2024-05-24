@@ -13,13 +13,19 @@ struct ProjectCard: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            if let firstPhotoData = project.photos.first, let uiImage = UIImage(data: firstPhotoData) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                
-            }
+            //            if let firstPhotoData = project.photos.first, let uiImage = UIImage(data: firstPhotoData) {
+            //                Image(uiImage: uiImage)
+            //                    .resizable()
+            //                    .scaledToFit()
+            //                    .frame(minWidth: 0, maxWidth: .infinity)
+            //
+            //            }
+            
+            Image("pfp")
+                .resizable()
+                .scaledToFit()
+                .frame(minWidth: 0, maxWidth: .infinity)
+            
         }
         
     }

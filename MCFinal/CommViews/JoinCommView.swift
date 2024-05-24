@@ -11,9 +11,9 @@ import SwiftData
 struct JoinCommView: View {
     @State private var name = ""
     @State private var password = ""
-    @Environment(\.modelContext) var modelContext
+//    @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
-    @Query var communities: [Community]
+//    @Query var communities: [Community]
     
     var body: some View {
         NavigationStack {
@@ -29,15 +29,15 @@ struct JoinCommView: View {
                 .navigationTitle("Join a Community")
                 .toolbar{
                     Button(action: {
-                       let comm = communities.first { $0.name==name && $0.password==password
-                        }
-                        
-                        if((comm) != nil){
-                            comm?.isIn=true
-                        }else{
-                            //popup
-                            print("nome o pass della comm errati")
-                        }
+//                       let comm = communities.first { $0.name==name && $0.password==password
+//                        }
+//                        
+//                        if((comm) != nil){
+//                            comm?.isIn=true
+//                        }else{
+//                            //popup
+//                            print("nome o pass della comm errati")
+//                        }
                         
                         dismiss()
                     }) {
