@@ -19,7 +19,6 @@ struct MCFinalApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-//                .modelContainer(for: [Idea.self, User.self, Project.self, Community.self, Request.self])
                 .environment(controller)
         }
     }
