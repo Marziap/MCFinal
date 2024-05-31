@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 
 @main
-struct MCFinalApp: App {
+struct MCFinalApp: App { 
     @State private var controller = Controller()
     
     init(){
